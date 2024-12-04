@@ -1,0 +1,482 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  justify-content: center; /* Centraliza o conteúdo no header */
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+header .logo {
+  display: flex; /* Usando flexbox para alinhar imagem e texto */
+  align-items: center; /* Alinha verticalmente a imagem e o texto */
+  gap:30px; /* Espaço entre a imagem e o texto */
+}
+
+header .logo img {
+  width: 60px; /* Ajuste o tamanho da imagem conforme necessário */
+  height: auto; /* Mantém a proporção da imagem */
+}
+
+header .logo span {
+  color: #ff69b4; /* Cor do texto */
+  font-size: 24px; /* Tamanho da fonte do texto */
+  font-weight: bold; /* Fonte em negrito */
+}
+
+
+header nav {
+  display: flex;
+  justify-content: center; /* Links ficam centralizados no header */
+  gap: 20px; /* Espaço entre os links */
+}
+
+header nav a {
+  position: relative;
+  color: #ff69b4;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 20px;
+  transition: all 0.3s ease; /* Efeito ao passar o mouse */
+}
+
+header nav a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 50%;
+  bottom: 0;
+  background-color: #ff69b4;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: #ff69b4;
+  color: #000;
+  border-radius: 5px;
+}
+
+header nav a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+.hero {
+  background: linear-gradient(to right, #ff69b4, #ff1493); /* Gradiente de fundo */
+  text-align: center;
+  padding: 150px 20px 50px; /* Aumentando o padding para maior destaque */
+}
+
+.hero h1 {
+  color: #fff;
+  font-size: 48px; /* Tamanho maior para o título */
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Efeito de sombra para dar destaque */
+}
+
+.hero p {
+  color: #fff;
+  font-size: 24px; /* Tamanho maior para a descrição */
+  line-height: 1.6; /* Maior espaçamento entre as linhas */
+  max-width: 800px; /* Limitar a largura do parágrafo */
+  margin: 20px auto; /* Centraliza o parágrafo */
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para destacar o texto */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidade */
+}
+.servicos {
+  padding: 60px 20px;
+  background-color: #f4f4f4; /* Cor de fundo suave para destacar a seção */
+  text-align: center;
+}
+
+.servicos h2 {
+  color: #ff69b4;
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.servicos-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Grid responsivo */
+  gap: 20px;
+}
+
+.servico {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.servico:hover {
+  transform: translateY(-5px); /* Efeito de levitar ao passar o mouse */
+}
+
+.servico h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.servico p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.preco {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff69b4;
+}
+
+
+.colaboradores {
+  padding: 20px;
+  background: #333;
+  text-align: center;
+}
+
+.colaboradores h2 {
+  color: #ff69b4;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.colaborador img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.map-container {
+  display: flex;
+  justify-content: center;  /* Centraliza o conteúdo horizontalmente */
+  align-items: center;      /* Centraliza o conteúdo verticalmente (caso tenha altura suficiente) */
+  padding: 20px;
+}
+.map-container iframe {
+  border: 35px solid #FF69B4; /* Exemplo de borda cor-de-rosa, substitua com a cor desejada */
+  border-radius: 10px;       /* Borda arredondada (opcional) */
+}
+.contact-section {
+  /* ... */
+  background-color: #FF69B4;
+}
+.contact-form {
+  /* ... */
+  background-color: #ec9191;
+  color: #333;
+}
+
+.contact-info {
+  /* ... */
+  background-color: #ff6b6b;
+  color: #fff;
+}
+.contact-section {
+display: flex;
+justify-content: space-between;
+padding: 80px;
+}
+
+.contact-form {
+flex: 1;
+padding: 20px;
+background-color: #ff69b4; /* Cor do fundo */
+border-radius: 10px;
+box-shadow: 0 0 20px 10px rgb(233, 25, 164); /* Box-shadow sólido e expandido */
+}
+
+
+.contact-form h2 {
+margin-top: 0;
+}
+
+.contact-form label,
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+display: block;
+margin-bottom: 10px;
+width: 100%;
+}
+
+
+.contact-info {
+  background-color: #ff69b4; /* cor das informaçoes de contato */
+  color: white;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info p, .contact-info a {
+  color: white;
+}
+
+.wrapper{
+  display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.wrapper .icons{
+   text-align: center;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   flex-direction: column;
+   position: relative;
+   z-index: 2;
+   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   object-position: center;
+   backdrop-filter: blur(5px);
+}
+
+.wrapper .icons span{
+   display: block;
+   height: 60px;
+   width: 60px;
+   background: transparent;
+   border-radius: 50%;
+   position: relative;
+   z-index: 2;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+   color: #000;
+}
+
+.wrapper .icons span i{
+   line-height: 60px;
+   font-size: 26px;
+}
+
+.wrapper .icons .tooltip {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 25px;
+    opacity: 0;
+    pointer-events: none;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.wrapper .icons:hover .tooltip{
+    top: -60px;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.wrapper .icons:hover span{
+    color: #ffffff;
+}
+
+.wrapper .icons:hover span,
+.wrapper .icons:hover .tooltip{
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.4);
+}
+
+.wrapper .facebook:hover span,
+.wrapper .facebook:hover .tooltip{
+    background: #3b5999;
+
+}
+
+.wrapper .instagram:hover span,
+.wrapper .instagram:hover .tooltip{
+    background: #e1306c;
+}
+
+.wrapper .twitter:hover span,
+.wrapper .twitter:hover .tooltip{
+    background: #46c1f6;
+}
+
+.wrapper .youtube:hover span,
+.wrapper .youtube:hover .tooltip{
+    background: #CD201F;
+}
+.footer {
+background-color: #333; /*cor do fundo do footer */
+padding: 20px;
+text-align: center;
+font-family: Arial, sans-serif;
+border-top: 2px solid #ccc;
+}
+
+.footer p {
+margin: 0;
+font-size: 18px;
+color: #f3f1f1; /* cor da letra footer */
+}
+
+.footer a {
+text-decoration: none;
+font-size: 18px;
+color: #f6f7f8;  /* cor da letra web - e-mail footer */
+transition: color 0.3s ease;
+}
+
+.footer a:hover {
+color: #f9fafc; /* cor da letra web - e-mail hover footer */
+}
+
+.footer .contact-link, .footer .web-link .email-link {
+display: inline-flex;
+align-items: center;
+margin-top: 10px;
+}
+
+.footer i {
+margin-right: 8px;
+font-size: 20px;
+}
+
+/* Efeito de fade-in */
+.footer .developer {
+  font-size: 16px;
+  font-style: italic;
+  color: #fff;
+  opacity: 0;
+  animation: fadeIn 2s forwards;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Definindo o efeito de fade-in */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsividade usando Flexbox para a seção de serviços */
+.servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.servicos h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.servicos .servico-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.servicos .servico-item .descricao {
+  font-size: 16px;
+}
+
+.servicos .servico-item .preco {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .servicos {
+    padding: 10px;
+  }
+
+  .servicos h2 {
+    font-size: 28px; /* Reduz o tamanho da fonte em telas menores */
+  }
+
+  .servicos .servico-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .servicos .servico-item .descricao,
+  .servicos .servico-item .preco {
+    font-size: 14px;
+  }
+}
+/* Para telas pequenas, como celulares */
+@media (max-width: 600px) {
+  body {
+    font-size: 14px; /* Ajusta o tamanho da fonte */
+  }
+
+  header {
+    padding: 10px 15px; /* Ajusta o padding do header */
+  }
+
+  .wrapper {
+    flex-direction: column; /* Coloca os ícones em uma coluna */
+  }
+
+  .footer {
+    font-size: 14px; /* Ajusta o tamanho da fonte no footer */
+  }
+}
+
+/* Para tablets ou telas médias */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 30px; /* Ajusta o tamanho do título */
+  }
+
+  .servicos h2 {
+    font-size: 28px; /* Reduz o tamanho do título */
+  }
+
+  .servicos .servico-item {
+    flex-direction: column; /* Coloca os serviços em coluna */
+  }
+}
+
+/* Para telas grandes como desktops */
+@media (min-width: 1024px) {
+  .hero h1 {
+    font-size: 48px; /* Tamanho maior para telas grandes */
+  }
+
+  .footer {
+    font-size: 18px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
